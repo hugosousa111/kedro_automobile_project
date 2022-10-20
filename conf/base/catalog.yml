@@ -1,0 +1,28 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://kedro.readthedocs.io/en/stable/data/data_catalog.html
+
+raw_dataset:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/Automobile_data.csv
+  load_args:
+    na_values: ['?','--','-','??','.','unknown']
+
+pp_dataset: 
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/pp_dataset.csv
+
+dataset_expanded: 
+  type: pandas.CSVDataSet
+  filepath: data/05_model_input/dataset_expanded.csv
+
+## Auxiliary objects
+
+oe_transformer: 
+  type: pickle.PickleDataSet
+  filepath: data/05_model_input/oe_transformer.pickle
+
+regressor: 
+  type: pickle.PickleDataSet
+  filepath: data/06_models/regressor.pickle
