@@ -1,0 +1,153 @@
+# API information
+title: 'FastAPI'
+description: >
+  ChimichangApp API helps you do awesome stuff. 🚀
+
+  ## Items
+
+  You can **read items**.
+
+  ## Users
+
+  You will be able to:
+
+  * **Create users** (_not implemented_).
+  * **Read users** (_not implemented_).
+version: '0.1.0'
+
+# Declare all tags
+tags:
+  users:
+    description: "Operations with users. The **login** logic is also here."
+  items:
+    description: "Manage items. So _fancy_ they have their own docs."
+
+routes:
+  # A route is the “name” you use to access endpoints, used in the URL:
+  # www.some_api.com/my_model/
+  my_model:
+    # Catalog reference to .pickle model
+    predictor: MLPredictor
+    # allowed types int, float, str, bool and enum
+    # parameters are used to create a single row pandas df
+    # make sure to declare in the same order as your model needs.
+
+    # Declare route tags
+    tags: ['users']
+
+    parameters:
+      symboling:
+        type: int
+      normalized_losses:
+        type: float
+      make:
+        type: enum
+        options:
+          - alfa_romero
+          - audi
+          - bmw
+          - chevrolet
+          - dodge
+          - honda
+          - isuzu
+          - jaguar
+          - mazda
+          - mercedes_benz
+          - mercury
+          - mitsubishi
+          - nissan
+          - peugot
+          - plymouth
+          - porsche
+          - saab
+          - subaru
+          - toyota
+          - volkswagen
+          - volvo
+      fuel_type:
+        type: enum
+        options:
+          - gas
+          - diesel
+      aspiration:
+        type: enum
+        options:
+          - std
+          - turbo
+      num_of_doors:
+        type: enum
+        options:
+          - two
+          - four
+      body_style:
+        type: enum
+        options:
+          - convertible
+          - hatchback
+          - sedan
+          - wagon
+          - hardtop
+      drive_wheels:
+        type: enum
+        options:
+          - rwd
+          - fwd
+          - FOURwd
+      engine_location:
+        type: enum
+        options:
+          - front
+          - rear
+      wheel_base:
+        type: float
+      length:
+        type: float
+      width:
+        type: float
+      height:
+        type: float
+      curb_weight:
+        type: int
+      engine_type:
+        type: enum
+        options:
+          - dohc
+          - ohcv
+          - ohc
+          - l
+          - ohcf
+      num_of_cylinders:
+        type: enum
+        options:
+          - four
+          - six
+          - five
+          - three
+          - twelve
+          - eight
+      engine_size:
+        type: int
+      fuel_system:
+        type: enum
+        options:
+          - mpfi
+          - TWObbl
+          - mfi
+          - ONEbbl
+          - spfi
+          - idi
+          - spdi
+      bore:
+        type: float
+      stroke:
+        type: float
+      compression_ratio:
+        type: float
+      horsepower:
+        type: float
+      peak_rpm:
+        type: float
+      city_mpg:
+        type: int
+      highway_mpg:
+        type: int

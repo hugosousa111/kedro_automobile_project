@@ -11,3 +11,6 @@ pytest-cov~=3.0
 pytest-mock>=1.7.1, <2.0
 pytest~=6.2
 scikit-learn==1.1.2
+kedro-viz==5.1.1
+kedro-mlflow==0.11.4
+kedro-fast-api==0.6.0

@@ -1,5 +1,10 @@
 # automobile_project
 
+kedro viz
+kedro mlflow ui
+kedro run
+kedro fast-api run
+
 ## Overview
 
 This is your new Kedro project, which was generated using `Kedro 0.18.3`.

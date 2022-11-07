@@ -17,6 +17,10 @@ dataset_expanded:
   type: pandas.CSVDataSet
   filepath: data/05_model_input/dataset_expanded.csv
 
+y_pred: 
+  type: pandas.CSVDataSet
+  filepath: data/07_model_output/Y_predictions.csv
+
 ## Auxiliary objects
 
 oe_transformer: 
@@ -26,3 +30,7 @@ oe_transformer:
 regressor: 
   type: pickle.PickleDataSet
   filepath: data/06_models/regressor.pickle
+
+# Metrics Mlflow
+regressor_metrics:
+  type: kedro_mlflow.io.metrics.MlflowMetricsDataSet

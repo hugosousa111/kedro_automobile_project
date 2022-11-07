@@ -28,8 +28,6 @@ def create_pipeline(**kwargs) -> Pipeline:
             inputs = {
                 "X_train": "X_train",
                 "y_train": "y_train",
-                "X_test": "X_test",
-                "y_test": "y_test",
                 }, 
             outputs = "regressor",
             name = 'fit_model'
